@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Card from './components/card';
 import Banner from './components/banner';
 
 export default function Home() {
@@ -13,9 +14,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-full w-screen overflow-y-auto">
+    <div className="w-full flex flex-col justify-center">
       <Banner />
-      <div className="pt-96"></div>
+      <div className="flex flex-wrap gap-x-5 gap-y-10 w-[calc(100%-240px)]">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }

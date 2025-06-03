@@ -1,15 +1,48 @@
-export default function Button({ variant = 'primary', children, icon, className }: any) {
-  const primary = 'text-black bg-white';
-  const secondary = 'text-white !bg-[#FF8D0A] border-white border';
+import { Slot } from '@radix-ui/react-slot';
+import { cva, type VariantProps } from 'class-variance-authority';
+import * as React from 'react';
 
-  const allClass = `flex gap-1 text-sm items-center justify-center rounded-full px-6 py-[13px]${
-    className ? ` ${className}` : ''
-  }${variant === 'secondary' ? ` ${secondary}` : ` ${primary}`}`;
+import { cn } from '@/lib/utils';
+
+const buttonVariants = cva(
+  'inline-flex items-center font-semibold rounded-full cursor-pointer !leading-4 justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
+  {
+    variants: {
+      variant: {
+        default: 'bg-primary text-[#FCFCFD] shadow-xs hover:bg-primary/90',
+        secondary: 'bg-white text-black hover:bg-white/90',
+        orange: 'bg-[#FF8D0A] text-white border',
+      },
+      size: {
+        default: 'px-6 py-4.5 text-base',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+);
+
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: React.ComponentProps<'button'> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  }) {
+  const Comp = asChild ? Slot : 'button';
 
   return (
-    <button className={allClass}>
-      {children}
-      {icon}
-    </button>
+    <Comp
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
   );
 }
+
+export { Button, buttonVariants };

@@ -3,7 +3,7 @@ import Header from '../components/header.js';
 
 export default function MainLayout() {
   return (
-    <div className="bg-white h-screen w-screen overflow-hidden">
+    <div className="bg-white">
       <Header />
       <Outlet />
     </div>
