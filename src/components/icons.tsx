@@ -1,8 +1,9 @@
-export { default as PhoneIcon } from '../assets/icons/phone-icon.svg?react';
-export { default as EmailIcon } from '../assets/icons/email-icon.svg?react';
-export { default as MenuIcon } from '../assets/icons/menu-icon.svg?react';
+export { default as ArrowIcon } from '../assets/icons/arrow-right-icon.svg?react';
 export { default as ChevronRightIcon } from '../assets/icons/chevron-right-icon.svg?react';
+export { default as EmailIcon } from '../assets/icons/email-icon.svg?react';
 export { default as FacebookIcon } from '../assets/icons/facebook-icon.svg?react';
 export { default as InstagramIcon } from '../assets/icons/instagram-icon.svg?react';
+export { default as MenuIcon } from '../assets/icons/menu-icon.svg?react';
+export { default as PhoneIcon } from '../assets/icons/phone-icon.svg?react';
 export { default as XIcon } from '../assets/icons/x-icon.svg?react';
 export { default as YoutubeIcon } from '../assets/icons/youtube-icon.svg?react';

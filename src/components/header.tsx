@@ -10,6 +10,7 @@ import {
   YoutubeIcon,
 } from './icons';
 import { Logo } from './image-svg';
+import ButtonLink from './link';
 
 export default function Header() {
   return (
@@ -75,13 +76,9 @@ export default function Header() {
           </Link>
         </div>
 
-        <Link
-          to="tel:+4401234567891"
-          className="flex gap-1 text-sm items-center justify-center rounded-full bg-primary px-6 py-[13px]"
-        >
-          <span>Tư vấn ngay</span>
-          <ChevronRightIcon className="stroke-[#FCFCFD]" />
-        </Link>
+        <ButtonLink to="tel:+4401234567891">
+          Tư vấn ngay <ChevronRightIcon className="stroke-[#FCFCFD]" />
+        </ButtonLink>
       </div>
     </header>
   );
