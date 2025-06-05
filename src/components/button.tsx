@@ -12,9 +12,11 @@ const buttonVariants = cva(
         default: 'bg-primary text-[#FCFCFD] shadow-xs hover:bg-primary/90',
         secondary: 'bg-white text-black hover:bg-white/90',
         orange: 'bg-[#FF8D0A] text-white border',
+        transparent: 'bg-transparent text-black',
       },
       size: {
         default: 'px-6 py-4.5 text-base',
+        auto: 'size-auto',
       },
     },
     defaultVariants: {

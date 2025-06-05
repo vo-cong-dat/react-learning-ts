@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Button } from './button';
 import {
   ChevronRightIcon,
   EmailIcon,
@@ -17,66 +17,62 @@ export default function Header() {
     <header>
       <div className="px-4 py-3 flex justify-between font-medium text-sm items-center bg-primary md:px-8 md:py-3">
         <div className="flex justify-between gap-5 md:justify-start items-center flex-1 md:flex-auto">
-          <div className="flex items-center justify-center gap-1">
-            <EmailIcon className="size-3" />
-            <a href="mailto:enquire@example.com">enquire@example.com</a>
-          </div>
-          <div className="flex items-center justify-center gap-1">
+          <ButtonLink href="mailto:enquire@example.com" size="auto">
+            <EmailIcon className="size-3" /> enquire@example.com
+          </ButtonLink>
+          <ButtonLink href="tel:+4401234567891" size="auto">
             <PhoneIcon className="size-3" />
-            <a href="tel:+4401234567891" className="whitespace-nowrap">
-              +44 (0) 1234 567 891
-            </a>
-          </div>
+          </ButtonLink>
         </div>
         <div className="hidden md:flex gap-3 items-center">
-          <a href="/">
+          <ButtonLink href="/" variant="transparent" size="auto">
             <YoutubeIcon />
-          </a>
-          <a href="/">
+          </ButtonLink>
+          <ButtonLink href="/" variant="transparent" size="auto">
             <InstagramIcon />
-          </a>
-          <a href="/">
+          </ButtonLink>
+          <ButtonLink href="/" variant="transparent" size="auto">
             <FacebookIcon />
-          </a>
-          <a href="/">
+          </ButtonLink>
+          <ButtonLink href="/" variant="transparent" size="auto">
             <XIcon />
-          </a>
-          <button className="flex items-center gap-1">
-            <span>Tiếng Việt </span>
+          </ButtonLink>
+          <Button>
+            Tiếng Việt
             <ChevronRightIcon className="size-5 rotate-90 stroke-[#FCFCFD]" />
-          </button>
+          </Button>
         </div>
       </div>
       <div className="bg-white px-4 py-3 flex items-center justify-between">
         <div className="flex gap-2 items-center justify-center">
-          <button className="md:hidden">
+          <Button className="md:hidden" variant="transparent">
             <MenuIcon />
-          </button>
-          <Link to="/home">
+          </Button>
+          <ButtonLink href="/home" variant="transparent" size="auto">
             <Logo className="w-[104px] h-auto" />
-          </Link>
+          </ButtonLink>
         </div>
         <div className="hidden text-black md:flex gap-6">
-          <Link to="/" className="flex items-center gap-1">
+          <ButtonLink to="/" size="auto" variant="transparent">
             Giới thiệu
-          </Link>
-          <Link to="/" className="flex items-center gap-1">
+          </ButtonLink>
+          <ButtonLink to="/" size="auto" variant="transparent">
             <span>Khoá học</span>
             <ChevronRightIcon className="size-5 rotate-90 stroke-black" />
-          </Link>
-          <Link to="/" className="flex items-center gap-1">
+          </ButtonLink>
+          <ButtonLink to="/" size="auto" variant="transparent">
             <span>Kiến thức</span>
             <ChevronRightIcon className="size-5 rotate-90 stroke-black" />
-          </Link>
-          <Link to="/" className="flex items-center gap-1">
+          </ButtonLink>
+          <ButtonLink to="/" size="auto" variant="transparent">
             Chính sách
-          </Link>
-          <Link to="/" className="flex items-center gap-1">
+          </ButtonLink>
+          <ButtonLink to="/" size="auto" variant="transparent">
             Liên hệ
-          </Link>
+          </ButtonLink>
         </div>
 
-        <ButtonLink to="tel:+4401234567891">
+        <ButtonLink href="tel:+4401234567891">
           Tư vấn ngay <ChevronRightIcon className="stroke-[#FCFCFD]" />
         </ButtonLink>
       </div>
