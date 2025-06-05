@@ -3,6 +3,8 @@ import Card from './components/card';
 import Banner from './components/banner';
 import AvatarMan from '../../assets/images/avatars/avatar-man.png';
 import AvatarWoman from '../../assets/images/avatars/avatar-woman.png';
+import { Button } from '../../components/button';
+import { ArrowEndIcon } from '../../components/icons';
 
 export default function Home() {
   const handleGetPost = async () => {
@@ -16,6 +18,19 @@ export default function Home() {
   }, []);
 
   const PTEs = [12, 24, 30, 40, 50, 60, 70, 80, 90, 99];
+
+  const teachers = [
+    {
+      image: AvatarMan,
+      name: 'Hùng Mạnh Dương',
+      position: 'Founder & Head Trainer',
+    },
+    {
+      image: AvatarWoman,
+      name: 'Phương Dương ',
+      position: 'PTE Trainer',
+    },
+  ];
 
   return (
     <div className="w-full flex flex-col justify-center">
@@ -55,23 +70,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full ">
-        <div>Đội ngũ giáo viên</div>
-        <div className="flex gap-3 w-full overflow-x-scroll">
-          <div className="max-w-[278px] relative w-full shrink-0">
-            <img src={AvatarMan} alt="" className="rounded-[8px] object-container w-full" />
-            <div className="absolute bottom-6 text-white text-center left-0 right-0">
-              <div>Hùng Mạnh Dương</div>
-              <div>Founder & Head Trainer</div>
+      <div className="w-full font-[Inter] pl-4">
+        <div className="text-[#1D2939] font-bold text-2xl leading-7 mt-10 mb-6 text-center">
+          Đội ngũ giáo viên
+        </div>
+        <div className="flex gap-3 w-full overflow-x-scroll pr-4 md:justify-center md:items-center">
+          {teachers.map((teacher, index) => (
+            <div key={index} className="max-w-[287px] relative w-full shrink-0">
+              <img src={teacher.image} alt="" className="rounded-[8px] object-container w-full" />
+              <div className="absolute bottom-6 text-white text-center left-0 right-0 space-y-2">
+                <div className="text-2xl font-bold">{teacher.name}</div>
+                <div className="text-sm font-medium">{teacher.position}</div>
+              </div>
             </div>
-          </div>
-          <div className="relative max-w-[278px] w-full shrink-0">
-            <img src={AvatarWoman} alt="" className="rounded-[8px] object-container w-full" />
-            <div className="absolute bottom-6 text-white text-center left-1/2 -translate-x-1/2 p-2 bg-black/90 backdrop-blur-3xl">
-              <div>Hùng Mạnh Dương</div>
-              <div className="whitespace-nowrap">Founder & Head Trainer </div>
-            </div>
-          </div>
+          ))}
+        </div>
+        <div className="text-center mt-6">
+          <Button className="text-sm font-semibold py-[13px] px-6 gap-1">
+            Xem tất cả
+            <ArrowEndIcon className="w-4" />
+          </Button>
         </div>
       </div>
       <div className="py-96"></div>
