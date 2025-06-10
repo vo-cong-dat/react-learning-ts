@@ -7,3 +7,4 @@ export { default as MenuIcon } from '../assets/icons/menu-icon.svg?react';
 export { default as PhoneIcon } from '../assets/icons/phone-icon.svg?react';
 export { default as XIcon } from '../assets/icons/x-icon.svg?react';
 export { default as YoutubeIcon } from '../assets/icons/youtube-icon.svg?react';
+export { default as ArrowEndIcon } from '../assets/icons/arrow-end-icon.svg?react';
