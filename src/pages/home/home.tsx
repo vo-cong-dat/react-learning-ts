@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import Card from './components/card';
-import Banner from './components/banner';
 import AvatarMan from '../../assets/images/avatars/avatar-man.png';
 import AvatarWoman from '../../assets/images/avatars/avatar-woman.png';
 import { Button } from '../../components/button';
 import { ArrowEndIcon } from '../../components/icons';
+import Banner from './components/banner';
+import Card from './components/card';
 
 export default function Home() {
   const handleGetPost = async () => {
@@ -86,12 +86,10 @@ export default function Home() {
           ))}
         </div>
         <div className="text-center mt-6">
-          <Button className="text-sm font-semibold py-[13px] px-6 gap-1">
-            Xem tất cả
-            <ArrowEndIcon className="w-4" />
-          </Button>
+          <Button icon={<ArrowEndIcon className="size-5" />}>Xem tất cả</Button>
         </div>
       </div>
+
       <div className="py-96"></div>
     </div>
   );
