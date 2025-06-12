@@ -5,22 +5,25 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center font-semibold rounded-full cursor-pointer !leading-4 justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap min-w-32 rounded-full shadow-button font-semibold text-base cursor-pointer',
   {
     variants: {
-      variant: {
-        default: 'bg-primary text-[#FCFCFD] shadow-xs hover:bg-primary/90',
-        secondary: 'bg-white text-black hover:bg-white/90',
-        orange: 'bg-[#FF8D0A] text-white border',
-        transparent: 'bg-transparent text-black',
+      color: {
+        primary: 'bg-[#02044F] text-[#FCFCFD]',
+        secondary: 'bg-white text-[#001524]',
+        transparent: 'outline-white outline-1 text-white bg-transparent',
+        default: 'text-[#111111]',
       },
       size: {
-        default: 'px-6 py-4.5 text-base',
-        auto: 'size-auto',
+        default: 'py-3.5 px-6',
+        auto: 'min-w-auto',
+      },
+      shape: {
+        outline: 'outline-1 outline-[#D0D5DD] font-normal text-[#111111]',
       },
     },
     defaultVariants: {
-      variant: 'default',
+      color: 'primary',
       size: 'default',
     },
   }
@@ -28,22 +31,29 @@ const buttonVariants = cva(
 
 function Button({
   className,
-  variant,
+  color,
   size,
+  shape,
   asChild = false,
+  children,
+  icon,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    icon?: React.ReactNode;
   }) {
   const Comp = asChild ? Slot : 'button';
 
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ color, size, shape, className }))}
       {...props}
-    />
+    >
+      {children}
+      {icon}
+    </Comp>
   );
 }
 

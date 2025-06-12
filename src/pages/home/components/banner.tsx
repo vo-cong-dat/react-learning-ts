@@ -1,6 +1,6 @@
-import { Button } from '../../../components/button';
-import { ChevronRightIcon } from '../../../components/icons';
 import Logo from '../../../assets/images/logo-white.png';
+import { Button } from '../../../components/button';
+import { ArrowEndIcon, ChevronRightIcon } from '../../../components/icons';
 
 export default function Banner() {
   return (
@@ -17,10 +17,9 @@ export default function Banner() {
             {` Học Không Chỉ Để Thi,
            Học Là Để Dẫn Đầu!`}
           </div>
-          <button className="flex gap-1 text-sm hover:bg-red-400 items-center justify-center rounded-full bg-white px-6 py-[13px]">
-            <span className="text-black">Tìm khóa học phù hợp ngay</span>
-            <ChevronRightIcon className="stroke-[#0e0e0e]" />
-          </button>
+          <Button color="secondary" icon={<ArrowEndIcon className="size-5" />}>
+            Tìm khóa học phù hợp ngay
+          </Button>
         </div>
       </div>
       <div className="mx-4 bg-[#FF8D0A] -top-[76px] flex-1 md:top-1/2 md:gap-x-[84px] flex-wrap md:-translate-y-1/2 md:mx-[120px] gap-4 p-6 flex flex-col md:flex-row md:items-center md:justify-between rounded-2xl md:px-10 relative">
@@ -28,11 +27,15 @@ export default function Banner() {
           Tìm các khóa học phù hợp với bạn và giúp con đường học vấn của bạn thành công
         </div>
         <div className="flex flex-col md:flex-row gap-3 flex-1">
-          <Button className="w-full font-normal md:w-2/3 justify-between" variant="secondary">
+          <Button
+            icon={<ArrowEndIcon className="size-5 rotate-90" />}
+            color="secondary"
+            shape="outline"
+            className="w-2/3 justify-between"
+          >
             Du học Úc - visa 500 (50/58/65)
-            <ChevronRightIcon className="stroke-[#0e0e0e] rotate-90" />
           </Button>
-          <Button className="w-full md:w-1/3" variant="orange">
+          <Button color="transparent" icon={<ArrowEndIcon className="size-5" />}>
             Xem khóa học phù hợp
           </Button>
         </div>
