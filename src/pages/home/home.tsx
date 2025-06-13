@@ -35,7 +35,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center">
+    <div className="w-full flex flex-col justify-center overflow-x-hidden">
       <Banner />
 
       <div className="md:w-[calc(100%-240px)] overflow-x-auto w-full mx-auto">

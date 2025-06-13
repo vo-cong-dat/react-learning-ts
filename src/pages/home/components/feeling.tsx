@@ -10,8 +10,8 @@ export default function Feeling() {
           services.
         </span>
       </div>
-      <div className="flex gap-3">
-        <div className="bg-[#FCFCFD] p-4 rounded-[12px] space-y-4">
+      <div className="flex gap-3 overflow-x-auto w-full">
+        <div className="bg-[#FCFCFD] p-4 shrink-0 rounded-[12px] text-sm leading-6 font-[Inter] space-y-4 h-[378px] w-[278px]">
           <div>
             <img src="public/images/studens/student-1.png" alt="" />
           </div>
@@ -22,12 +22,35 @@ export default function Feeling() {
             <StartIcon className="size-5" />
             <StartIcon className="size-5" />
           </div>
-          <div>
+          <div className="text-[#667085] font-medium">
             I would definitely recommend Medlink Students! They offer a very professional service
             and make the application process very quick and easy.
           </div>
           <div>
-            <div>Herman Miller</div>
+            <div className="font-bold">Herman Miller</div>
+            <div>Student</div>
+          </div>
+        </div>
+        <div className="bg-[#FCFCFD] p-4 mr-4 shrink-0 rounded-[12px] text-sm leading-6 font-[Inter] space-y-4 h-[378px] w-[278px]">
+          <div>
+            <img src="public/images/studens/student-1.png" alt="" />
+          </div>
+          <div className="flex gap-1 mb-2">
+            <StartIcon className="size-5" />
+            <StartIcon className="size-5" />
+            <StartIcon className="size-5" />
+            <StartIcon className="size-5" />
+            <StartIcon className="size-5" />
+          </div>
+          <div className="text-[#667085] font-medium line-clamp-4">
+            I would definitely recommend Medlink Students! They offer a very professional service I
+            would definitely recommend Medlink Students! They offer a very professional service I
+            would definitely recommend Medlink Students! They offer a very professional service I
+            would definitely recommend Medlink Students! They offer a very professional service and
+            make the application process very quick and easy.
+          </div>
+          <div>
+            <div className="font-bold">Herman Miller</div>
             <div>Student</div>
           </div>
         </div>
