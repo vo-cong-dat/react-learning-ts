@@ -54,7 +54,7 @@ export default function Header() {
           />
         </div>
         <div className="hidden text-black md:flex gap-6">
-          <ButtonLink to="/" size="auto" color="default">
+          <ButtonLink to="/home" size="auto" color="default">
             Giới thiệu
           </ButtonLink>
           <ButtonLink

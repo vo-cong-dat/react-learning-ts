@@ -52,6 +52,7 @@
 
 @theme {
   --color-primary: #03044f;
+  --color-orange-1000: #FF8D0A,
   --spacing-icon: 35px;
   --shadow-button: '0px 1px 2px 0px #1018280D';
 }
@@ -135,4 +136,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@utility bg-container {
+  background-image: linear-gradient(179.73deg, #fffbf3 0.17%, #ffffff 99.76%);
 }
