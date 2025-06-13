@@ -1,6 +1,6 @@
 import Logo from '../../../assets/images/logo-white.png';
 import { Button } from '../../../components/button';
-import { ArrowEndIcon, ChevronRightIcon } from '../../../components/icons';
+import { ArrowEndIcon } from '../../../components/icons';
 
 export default function Banner() {
   return (
@@ -31,7 +31,7 @@ export default function Banner() {
             icon={<ArrowEndIcon className="size-5 rotate-90" />}
             color="secondary"
             shape="outline"
-            className="w-2/3 justify-between"
+            className="md:w-2/3 justify-between"
           >
             Du học Úc - visa 500 (50/58/65)
           </Button>
