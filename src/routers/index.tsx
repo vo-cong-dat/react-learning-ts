@@ -13,9 +13,11 @@
 
 import { Route, Routes } from 'react-router';
 import MainLayout from '../layouts/main-layout';
-import Home from '../pages/home/home';
 import PolicyPage from '../pages/policy';
 import ProtectedRouter from './protected';
+import { lazy } from 'react';
+
+const HomePage = lazy(() => import('../pages/home/home'));
 
 export default function Routing() {
   return (
@@ -23,7 +25,7 @@ export default function Routing() {
       <Route element={<ProtectedRouter />}>
         <Route element={<MainLayout />}>
           <Route index element={<div>Hello Page Index </div>} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/policy" element={<PolicyPage />} />
         </Route>
       </Route>

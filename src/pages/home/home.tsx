@@ -5,6 +5,8 @@ import { Button } from '../../components/button';
 import { ArrowEndIcon } from '../../components/icons';
 import Banner from './components/banner';
 import Card from './components/card';
+import { cn } from '../../lib/utils';
+import Feeling from './components/feeling';
 
 export default function Home() {
   const handleGetPost = async () => {
@@ -70,13 +72,24 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full font-[Inter] pl-4">
-        <div className="text-[#1D2939] font-bold text-2xl leading-7 mt-10 mb-6 text-center">
+      <div
+        className={cn(
+          'w-full font-[Inter] relative pl-4',
+          'after:content-[""] after:absolute after:size-full after:top-2 after:left-0 after:bg-[url("public/images/backgrounds/bg-image.png")] after:object-contain after:bg-no-repeat',
+          'before:content-[""] before:bg-[radial-gradient(50%_50%_at_50%_50%,#B5E2FA_0%,rgba(217,217,217,0)_100%)]',
+          'before:absolute before:block before:size-[964px] before:left-1/2 before:top-1/2 before:-translate-y-1/2'
+        )}
+      >
+        <div className="text-[#1D2939] relative z-10 font-bold text-2xl leading-7 mt-10 mb-6 text-center">
           Đội ngũ giáo viên
         </div>
-        <div className="flex gap-3 w-full overflow-x-scroll pr-4 md:justify-center md:items-center">
+        <div
+          className={cn(
+            'flex gap-3 w-full overflow-x-scroll pr-4 md:justify-center md:items-center'
+          )}
+        >
           {teachers.map((teacher, index) => (
-            <div key={index} className="max-w-[287px] relative w-full shrink-0">
+            <div key={index} className={cn('max-w-[287px] relative w-full shrink-0 z-10')}>
               <img src={teacher.image} alt="" className="rounded-[8px] object-container w-full" />
               <div className="absolute bottom-6 text-white text-center left-0 right-0 space-y-2">
                 <div className="text-2xl font-bold">{teacher.name}</div>
@@ -85,10 +98,11 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-6">
+        <div className="text-center mt-6 relative z-10">
           <Button icon={<ArrowEndIcon className="size-5" />}>Xem tất cả</Button>
         </div>
       </div>
+      <Feeling />
 
       <div className="py-96"></div>
     </div>
