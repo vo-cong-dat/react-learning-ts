@@ -55,6 +55,8 @@
   --color-orange-1000: #FF8D0A,
   --spacing-icon: 35px;
   --shadow-button: '0px 1px 2px 0px #1018280D';
+  --color-gray-200: #EAECF0;
+  --color-gray-700: #344054;
 }
 
 @theme inline {

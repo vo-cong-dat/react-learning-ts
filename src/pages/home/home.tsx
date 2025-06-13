@@ -7,6 +7,7 @@ import Banner from './components/banner';
 import Card from './components/card';
 import { cn } from '../../lib/utils';
 import Feeling from './components/feeling';
+import Register from './components/register';
 
 export default function Home() {
   const handleGetPost = async () => {
@@ -103,6 +104,7 @@ export default function Home() {
         </div>
       </div>
       <Feeling />
+      <Register />
 
       <div className="py-96"></div>
     </div>
