@@ -11,9 +11,7 @@ import Register from './components/register';
 
 export default function Home() {
   const handleGetPost = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-
-    console.log(res);
+    await fetch('https://jsonplaceholder.typicode.com/todos/1');
   };
 
   useEffect(() => {
