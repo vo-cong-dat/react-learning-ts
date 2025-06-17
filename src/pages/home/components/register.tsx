@@ -46,28 +46,26 @@ export default function Register() {
           Tư vấn ngay
         </Button>
       </div>
-      <div>
-        <div>Tư vấn nhanh</div>
-        <div>
-          <ButtonLink
-            icon={<PhoneIcon className="size-4 text-[#001524]" />}
-            href="tel:+61426812895"
-            color="default"
-            size="auto"
-          >
-            +61 426 812 895 (Úc - Australia)
-          </ButtonLink>
-        </div>
-        <div>
-          <ButtonLink
-            icon={<PhoneIcon className="size-4 text-[#001524]" />}
-            href="tel:+84888031854"
-            color="default"
-            size="auto"
-          >
-            +84 888 031 854 (Việt Nam)
-          </ButtonLink>
-        </div>
+      <div className="mt-8 space-y-4">
+        <div className="font-semibold">Tư vấn nhanh</div>
+        <ButtonLink
+          icon={<PhoneIcon className="size-4" />}
+          href="tel:+61426812895"
+          color="default"
+          size="auto"
+          className="text-[#001524] text-sm font-medium"
+        >
+          +61 426 812 895 (Úc - Australia)
+        </ButtonLink>
+        <ButtonLink
+          icon={<PhoneIcon className="size-4" />}
+          href="tel:+84888031854"
+          color="default"
+          size="auto"
+          className="text-[#001524] text-sm font-medium"
+        >
+          +84 888 031 854 (Việt Nam)
+        </ButtonLink>
       </div>
     </div>
   );

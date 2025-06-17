@@ -1,7 +1,6 @@
 import { Button } from './button';
 import {
   ArrowEndIcon,
-  ChevronRightIcon,
   EmailIcon,
   FacebookIcon,
   InstagramIcon,
