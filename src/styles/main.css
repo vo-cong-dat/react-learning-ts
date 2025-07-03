@@ -50,6 +50,7 @@
   --color-primary-200: #6620c1;
   --color-grey-100: #eaeaea;
   --color-grey-200: #807d7e;
+  --color-grey-300: #333333;
 
   --shadow-button: 0px 3px 4px 0px #0000001a;
 }
@@ -87,6 +88,8 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.606 0.25 292.717);
+
+  --max-w-screen: 1240px;
 }
 
 .dark {
@@ -130,4 +133,7 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@components {
 }
